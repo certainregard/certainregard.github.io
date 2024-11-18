@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certain Regard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Certain Regard</h1>
-        <p>Your hub for young writers and politicians.</p>
-    </header>
-    <section>
-        <h2>Featured Articles</h2>
-        <p>Check out our latest articles on emerging voices in politics and literature.</p>
-    </section>
-</body>
-</html>
+---
+layout: default
+title: "Certain Regard"
+---
+<!-- Search Bar Section -->
+<input type="text" id="search-bar" placeholder="Search articles...">
+
+<!-- Articles Section -->
+<div class="articles">
+    <div class="article">
+        <h2 class="title">First Article Title</h2>
+        <p>Content of the first article...</p>
+    </div>
+
+    <div class="article">
+        <h2 class="title">Second Article Title</h2>
+        <p>Content of the second article...</p>
+    </div>
+
+    <!-- Add more articles here -->
+</div>
+
+<!-- JavaScript for the Search Bar Functionality -->
+<script>
+    document.getElementById('search-bar').addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase();
+        document.querySelectorAll('.article').forEach(article => {
+            const title = article.querySelector('.title').innerText.toLowerCase();
+            article.style.display = title.includes(query) ? '' : 'none';
+        });
+    });
+</script>

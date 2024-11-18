@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Certain Regard</h1>
+    </header>
+
+    <!-- Content Section -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyright &copy; 2024 Certain Regard</p>
+    </footer>
+
+    <!-- Include Search Bar Script -->
+    <script>
+        document.getElementById('search-bar').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.article').forEach(article => {
+                const title = article.querySelector('.title').innerText.toLowerCase();
+                article.style.display = title.includes(query) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
