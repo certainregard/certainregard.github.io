@@ -1,83 +1,77 @@
-/* Reset some basic styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Import Artistic Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 20px;
+    font-family: 'Playfair Display', serif; /* Elegant Serif Font */
+    background-color: #F5E6C4; /* Beige/Tan */
+    color: #5A4636; /* Dark Brown */
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  text-align: center;
+/* Navigation Bar */
+nav {
+    background-color: #D2B48C; /* Light Brown */
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-header h1 {
-  font-size: 36px;
-  margin: 0;
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.8; /* More text spacing */
 }
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+/* Home Page Centering */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
 
-h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
+/* Service Page Image Styling */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 20px;
+	margin-bottom: 100px; 
+	
+}
+.image-container img {
+    max-width: 250px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-article {
-  background-color: #fff;
-  margin: 20px 0;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-article h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-article p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
+/* Footer */
 footer {
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-  color: #777;
+    background-color: #D2B48C;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-footer p {
-  margin: 0;
-}
-
-.article {
-  margin-bottom: 20px;
-}
-
-.article.hidden {
-  display: none;
+p {
+    margin-bottom: 40px; /* Adjust this value to control the space between paragraphs */
 }
