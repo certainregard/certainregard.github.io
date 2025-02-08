@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About BeaulAI LLC
+permalink: /about/
 ---
 
 # About Us
